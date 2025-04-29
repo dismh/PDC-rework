@@ -17,8 +17,9 @@ import image from "./assets/tungtungsahur.jpg";
 import { CalendarDays, Clock } from "lucide-react";
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white" id="home">
       <Header />
+      
       <AuroraBackground>
         <motion.div
           initial={{ opacity: 0.0, y: 40 }}
@@ -30,7 +31,7 @@ function App() {
           }}
           className="relative flex flex-col gap-4 items-center justify-center px-4"
         >
-          <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
+          <div className="text-3xl md:text-7xl font-bold dark:text-white text-center" >
             Parliamentary Debate Championship 2025
           </div>
           <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">

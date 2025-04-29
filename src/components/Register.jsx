@@ -1,3 +1,5 @@
+import { ArrowRight } from "lucide-react";
+
 const Register = () => {
   return (
     <section id="register" className="py-16 bg-gray-100 dark:bg-gray-900">
@@ -5,40 +7,20 @@ const Register = () => {
         <h2 className="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-white">
           Register for PDC 2025
         </h2>
-        <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-6">
+        <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-8 text-center">
           Sign up to compete in the Parliamentary Debate Championship. Limited
           spots available!
         </p>
-        <div className="max-w-md mx-auto">
-          <form className="space-y-4">
-            <input
-              type="text"
-              placeholder="Full Name"
-              className="w-full p-3 border rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 border-gray-300 dark:border-gray-600"
-              required
-            />
-            <input
-              type="email"
-              placeholder="Email Address"
-              className="w-full p-3 border rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 border-gray-300 dark:border-gray-600"
-              required
-            />
-            <input
-              type="text"
-              placeholder="Team Name (Optional)"
-              className="w-full p-3 border rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 border-gray-300 dark:border-gray-600"
-            />
-            <button
-              type="submit"
-              className="w-full bg-blue-600 dark:bg-blue-700 text-white p-3 rounded-lg font-semibold hover:bg-blue-700 dark:hover:bg-blue-800"
-            >
-              Submit Registration
-            </button>
-          </form>
-          <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
-            Note: Form submission requires a backend service (e.g., Firebase,
-            Node.js) to process data.
-          </p>
+        <div className="flex justify-center">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLScDgCY7yxyKNbAqFTC3axd_g2HmJrMcfAFK8bgW5CFQ2M0ebg/viewform?usp=sharing"
+            className="inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 via-sky-600 to-blue-700 rounded-full hover:from-blue-700 hover:via-sky-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-[0_0_25px_rgba(56,189,248,0.8)]"
+          >
+            Go to Form
+            <ArrowRight className="w-5 h-5" />
+          </a>
+
+
         </div>
       </div>
     </section>
