@@ -3,23 +3,26 @@ import img from "../assets/Logo.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+const [isDarkMode, setIsDarkMode] = useState(true); // Set dark mode as default
 
-  // Toggle dark mode and persist in localStorage
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    document.documentElement.classList.toggle("dark");
-    localStorage.setItem("theme", !isDarkMode ? "dark" : "light");
-  };
+// Toggle dark mode and persist in localStorage
+const toggleDarkMode = () => {
+  setIsDarkMode(!isDarkMode);
+  document.documentElement.classList.toggle("dark");
+  localStorage.setItem("theme", !isDarkMode ? "dark" : "light");
+};
 
-  // Load theme from localStorage on mount
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      setIsDarkMode(true);
-      document.documentElement.classList.add("dark");
-    }
-  }, []);
+// Load theme from localStorage on mount
+useEffect(() => {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "light") {
+    setIsDarkMode(false);
+    document.documentElement.classList.remove("dark");
+  } else {
+    setIsDarkMode(true);
+    document.documentElement.classList.add("dark");
+  }
+}, []);
 
   // Handle smooth scrolling with offset for fixed header
   const handleScroll = (e, sectionId) => {
