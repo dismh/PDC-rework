@@ -25,8 +25,8 @@ const Contact = () => {
               <div>
                 <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-100">Email</h4>
                 <p className="text-gray-700 dark:text-gray-300">
-                  <a href="mailto:dispdc@online.dooninternational.net" className=" hover:text-blue-600 dark:hover:text-blue-400 no-underline" >
-                    dispdc@online.dooninternational.net
+                  <a href="mailto:dis_tech@online.dooninternational.net" className=" hover:text-blue-600 dark:hover:text-blue-400 no-underline" >
+                    dis_tech@online.dooninternational.net
                   </a>
                 </p>
               </div>
@@ -36,8 +36,8 @@ const Contact = () => {
               <div>
                 <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-100">Phone</h4>
                 <p className="text-gray-700 dark:text-gray-300">
-                  <a href="tel:+911722216700" className="hover:text-blue-600 dark:hover:text-blue-400 no-underline">
-                    0172 221 6700
+                  <a href="tel:+919876272716" className="hover:text-blue-600 dark:hover:text-blue-400 no-underline">
+                   +91 9876272716
                   </a>
                 </p>
               </div>

@@ -30,7 +30,13 @@ const PreparationAndTimings = () => {
 
   const timingSignals = [
     {
-      title: "Substantive Speeches",
+      title: (
+        <>
+          Substantive Speeches
+          <br />
+          (5 + 1 Minutes)
+        </>
+      ),
       timings: [
         { time: "1st Minute", signal: "Single knock" },
         { time: "5th Minute", signal: "Single knock" },
@@ -38,7 +44,13 @@ const PreparationAndTimings = () => {
       ],
     },
     {
-      title: "Reply Speeches",
+      title: (
+        <>
+          Reply Speeches
+          <br />
+          (3 + 1 Minutes)
+        </>
+      ),
       timings: [
         { time: "3rd Minute", signal: "Single knock" },
         { time: "4th Minute", signal: "Double knock" },
@@ -83,13 +95,29 @@ const PreparationAndTimings = () => {
           </motion.h3>
           <div className="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-6 md:p-8 transition hover:shadow-xl">
             <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-              Matchups and venues will be announced before motions are revealed. Once the motions are released, teams must immediately rank their motions and select one in the presence of the runner and/or adjudicators. Teams then proceed to their designated venues to prepare. From the time of motion release, teams have <span className="font-bold text-indigo-600 dark:text-indigo-400">20 minutes</span> of preparation time.
+              Matchups and venues will be announced before motions are revealed.
+              Once the motions are released, teams must immediately rank their
+              motions and select one in the presence of the runner and/or
+              adjudicators. Teams then proceed to their designated venues to
+              prepare. From the time of motion release, teams have{" "}
+              <span className="font-bold text-indigo-600 dark:text-indigo-400">
+                20 minutes
+              </span>{" "}
+              of preparation time.
             </p>
             <ul className="mt-4 space-y-2 text-gray-700 dark:text-gray-300 list-disc list-inside">
-              <li>No access to electronic media or storage devices after motions are released.</li>
+              <li>
+                No access to electronic media or storage devices after motions
+                are released.
+              </li>
               <li>Teams must prepare independently without external assistance.</li>
-              <li>Any contact with coaches, friends, or observers for assistance is considered cheating and will lead to disqualification.</li>
-              <li>The adjudicator's decision in such cases is final and binding.</li>
+              <li>
+                Any contact with coaches, friends, or observers for assistance is
+                considered cheating and will lead to disqualification.
+              </li>
+              <li>
+                The adjudicator's decision in such cases is final and binding.
+              </li>
             </ul>
           </div>
         </motion.div>
@@ -137,7 +165,12 @@ const PreparationAndTimings = () => {
             ))}
           </div>
           <p className="mt-6 text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-            After the double knock, speakers have a <span className="font-bold text-indigo-600 dark:text-indigo-400">20-second grace period</span> to conclude. Exceeding this may result in penalties as determined by the adjudicator.
+            After the double knock, speakers have a{" "}
+            <span className="font-bold text-indigo-600 dark:text-indigo-400">
+              20-second grace period
+            </span>{" "}
+            to conclude. Exceeding this may result in penalties as determined by
+            the adjudicator.
           </p>
         </motion.div>
 

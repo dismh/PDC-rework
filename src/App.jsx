@@ -12,7 +12,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import "./index.css"; // or wherever your Tailwind CSS file is
 import { AuroraBackground } from "./components/ui/aurora-background.jsx";
-import { MacbookScroll } from "./components/ui/Macbook-Scroll.jsx";
+// import { MacbookScroll } from "./components/ui/Macbook-Scroll.jsx";
 import image from "./assets/tungtungsahur.jpg";
 import { CalendarDays, Clock } from "lucide-react";
 function App() {
