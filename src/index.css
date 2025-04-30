@@ -36,3 +36,9 @@ html.dark {
   white-space: nowrap;
   /* Prevent text from wrapping */
 }
+
+.gangnam-style {
+  z-index: 0;
+  color: #fff; /* Text color */
+  text-shadow: 0 0 10px rgb(106, 0, 176), 0 0 20px rgb(115, 39, 247), 0 0 30px rgb(64, 0, 129); /* Blue glow */
+}

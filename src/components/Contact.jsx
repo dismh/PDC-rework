@@ -37,7 +37,7 @@ const Contact = () => {
                 <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-100">Phone</h4>
                 <p className="text-gray-700 dark:text-gray-300">
                   <a href="tel:+919876272716" className="hover:text-blue-600 dark:hover:text-blue-400 no-underline">
-                   +91 9876272716
+                   +91 9876272716 - Ms. Deepmala (Faculty Convenor)
                   </a>
                 </p>
               </div>

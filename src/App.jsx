@@ -12,9 +12,9 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import "./index.css"; // or wherever your Tailwind CSS file is
 import { AuroraBackground } from "./components/ui/aurora-background.jsx";
-// import { MacbookScroll } from "./components/ui/Macbook-Scroll.jsx";
 import image from "./assets/tungtungsahur.jpg";
 import { CalendarDays, Clock } from "lucide-react";
+import {FlipWords} from "./components/ui/flip-words.jsx";
 function App() {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white" id="home">
@@ -34,9 +34,10 @@ function App() {
           <div className="text-3xl md:text-7xl font-bold dark:text-white text-center" >
             Parliamentary Debate Championship 2025
           </div>
-          <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
-            Join the ultimate clash of minds! Compete, debate, and shine.
+          <div className=" font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
+            Join the ultimate clash of minds! <span><FlipWords words={["Compete.", "Debate.", "Shine."]} duration={2000} className=" text-4xl font-semibold gangnam-style"/></span> 
           </div>
+          
           <button
             href="#register"
             className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-4 py-2"
@@ -45,6 +46,7 @@ function App() {
           </button>
         </motion.div>
       </AuroraBackground>
+      
       <main>
         {/* <Hero /> */}
       
