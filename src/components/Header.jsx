@@ -41,7 +41,7 @@ const Header = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="bg-blue-800 dark:bg-blue-900 text-white py-4 sticky top-0 z-10 shadow-md">
+    <header className="bg-blue-800 dark:bg-blue-900 text-white py-4 sticky top-0 z-10 shadow-md bomboclat">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <img src={img} alt="Logo" className="h-20 w-20" />
@@ -52,13 +52,15 @@ const Header = () => {
           <ul className="flex space-x-6">
             {["home", "about", "schedule", "register", "contact"].map((id) => (
               <li key={id}>
-                <a
+                <motion.a
                   href={`#${id}`}
                   onClick={(e) => handleScroll(e, `#${id}`)}
-                  className="hover:text-blue-300 dark:hover:text-blue-400 capitalize"
+                  className="hover:text-blue-300 dark:hover:text-blue-400 capitalize inline-block"
+                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.159, ease: "easeOut" }}
                 >
                   {id}
-                </a>
+                </motion.a>
               </li>
             ))}
           </ul>
@@ -75,7 +77,7 @@ const Header = () => {
                 isDarkMode ? "translate-x-10" : "translate-x-0"
               } shadow-md text-lg`}
             >
-              {isDarkMode ? "🌙" : "☀️"}
+              {isDarkMode ? "🌙" : "🟡"}
             </span>
           </button>
         </nav>
@@ -94,7 +96,7 @@ const Header = () => {
                 isDarkMode ? "translate-x-10" : "translate-x-0"
               } shadow-md text-lg`}
             >
-              {isDarkMode ? "🌙" : "☀️"}
+              {isDarkMode ? "🌙" : "🟡"}
             </span>
           </button>
           <button onClick={toggleMenu}>
@@ -127,13 +129,15 @@ const Header = () => {
             <ul className="flex flex-col space-y-3 text-lg">
               {["home", "about", "schedule", "register", "contact"].map((id) => (
                 <li key={id}>
-                  <a
+                  <motion.a
                     href={`#${id}`}
                     onClick={(e) => handleScroll(e, `#${id}`)}
                     className="block text-white hover:text-blue-300 dark:hover:text-blue-400 capitalize"
+                    whileHover={{ y: -5 }}
+                    transition={{ duration: 0.2, ease: "easeOut" }}
                   >
                     {id}
-                  </a>
+                  </motion.a>
                 </li>
               ))}
             </ul>
