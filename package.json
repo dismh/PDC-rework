@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@tabler/icons-react": "^3.31.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.503.0",
