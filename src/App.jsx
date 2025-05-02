@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white" id="home">
       <Header />
-      
+            
       <AuroraBackground>
   <motion.div
     initial={{ opacity: 0.0, y: 40 }}
@@ -62,7 +62,6 @@ function App() {
         <Schedule />
         <LampDemo />
         <Register />
-        
         <Contact />
       </main>
       <Footer />
