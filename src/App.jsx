@@ -62,8 +62,9 @@ function App() {
         <PreparationAndTimings />
         <PoisAndConduct />
         <Schedule />
-        <Register />
         <LampDemo />
+        <Register />
+        
         <Contact />
       </main>
       <Footer />
