@@ -205,22 +205,6 @@ const Rules = () => {
             determines the motion, overseen by the adjudicator.
           </p>
         </motion.div>
-
-        {/* Call-to-Action Button */}
-        <motion.div
-          className="mt-10 text-center max-w-3xl mx-auto"
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.8, type: "spring", stiffness: 120 }}
-          viewport={{ once: false }}
-        >
-          <a
-            href="#register"
-            className="inline-block px-8 py-4 text-xl font-semibold text-white bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-[0_0_20px_rgba(99,102,241,0.8)]"
-          >
-            Register Now
-          </a>
-        </motion.div>
       </div>
     </section>
   );

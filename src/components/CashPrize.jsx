@@ -1,26 +1,34 @@
 import React from "react";
 import { motion } from "motion/react";
 import { cn } from "../lib/utils.js";
+import { useState } from "react";
 
 
 export function LampDemo() {
   return (
     <LampContainer>
-      <motion.h1
-        initial={{ opacity: 0.5, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.3,
-          duration: 1,
-          ease: "easeInOut",
-        }}
-        className="mt-8 bg-gradient-to-br from-black to-slate-700 dark:from-slate-300 dark:to-slate-100 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
-      >
-        Cash Prize <br />
-        <span className="bg-gradient-to-br from-black to-slate-700 dark:from-slate-300 dark:to-slate-100 bg-clip-text text-transparent">
-          $10,000
-        </span>
-      </motion.h1>
+<motion.h1
+  initial={{ opacity: 0.5, y: 100 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{
+    delay: 0.3,
+    duration: 1,
+    ease: "easeInOut",
+  }}
+  className="mt-8 bg-gradient-to-br from-black to-slate-700 dark:from-slate-300 dark:to-slate-100 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+>
+<span className="transition duration-300">
+  Cash Prize
+</span>
+  <br /> <br />
+  <span className="bg-gradient-to-br from-black to-slate-700 dark:from-slate-300 dark:to-slate-100 bg-clip-text text-transparent CHICKENJOCKEY">
+    <p>
+      Winner : ₹ 30,000 <br />
+      Runner Up : ₹ 21,000 <br />
+      Best Orator : ₹ 7000
+    </p>
+  </span>
+</motion.h1>
     </LampContainer>
   );
 }
