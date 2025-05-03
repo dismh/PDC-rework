@@ -16,6 +16,7 @@ import image from "./assets/tungtungsahur.jpg";
 import { CalendarDays, Clock } from "lucide-react";
 import { FlipWords } from "./components/ui/flip-words.jsx";
 import { LampDemo, LampContainer } from "./components/ui/lamp.jsx";
+import PayButton from "./components/ui/Payment.jsx";
 function App() {
   return (
     <div
@@ -54,6 +55,7 @@ function App() {
           </button>
         </motion.div>
       </AuroraBackground>
+
       <main>
         {/* <Hero /> */}
 
@@ -64,6 +66,7 @@ function App() {
         <Schedule />
         <LampDemo />
         <Register />
+        <PayButton className="pay-btn" />
         <Contact />
       </main>
       <Footer />

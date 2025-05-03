@@ -23,9 +23,9 @@ const Header = () => {
     }
   }, []);
 
-  const handleScroll = (e, sectionId) => {
+  const handleScroll = (e, selector) => {
     e.preventDefault();
-    const section = document.querySelector(sectionId);
+    const section = document.querySelector(selector);
     if (section) {
       const headerOffset = 80;
       const sectionPosition =
@@ -61,6 +61,15 @@ const Header = () => {
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href=".pay-btn"
+                onClick={(e) => handleScroll(e, `.pay-btn`)}
+                className="hover:text-blue-300 dark:hover:text-blue-400 font-semibold uppercase"
+              >
+                Payment
+              </a>
+            </li>
           </ul>
           <button
             onClick={toggleDarkMode}
@@ -125,17 +134,28 @@ const Header = () => {
             transition={{ duration: 0.3 }}
           >
             <ul className="flex flex-col space-y-3 text-lg">
-              {["home", "about", "schedule", "register", "contact"].map((id) => (
-                <li key={id}>
-                  <a
-                    href={`#${id}`}
-                    onClick={(e) => handleScroll(e, `#${id}`)}
-                    className="block text-white hover:text-blue-300 dark:hover:text-blue-400 capitalize"
-                  >
-                    {id}
-                  </a>
-                </li>
-              ))}
+              {["home", "about", "schedule", "register", "contact"].map(
+                (id) => (
+                  <li key={id}>
+                    <a
+                      href={`#${id}`}
+                      onClick={(e) => handleScroll(e, `#${id}`)}
+                      className="block text-white hover:text-blue-300 dark:hover:text-blue-400 capitalize"
+                    >
+                      {id}
+                    </a>
+                  </li>
+                )
+              )}
+              <li>
+                <a
+                  href=".pay-btn"
+                  onClick={(e) => handleScroll(e, `.pay-btn`)}
+                  className="block text-white hover:text-yellow-400 uppercase font-semibold"
+                >
+                  Payment
+                </a>
+              </li>
             </ul>
           </motion.nav>
         )}
