@@ -65,12 +65,38 @@ const Payment = ({ theme = "light" }) => {
         <ModalBackdrop $isDark={isDark} onClick={handleCloseModal}>
           <ModalContent $isDark={isDark} onClick={(e) => e.stopPropagation()}>
             <ModalHeader>
-              <h3>Scan to Pay</h3>
+              <h3>Payment Options</h3>
               <CloseButton onClick={handleCloseModal}>×</CloseButton>
             </ModalHeader>
             <ModalBody>
-              <p>Scan the QR code below to complete your payment.</p>
-              <QRImage src={scanner} alt="QR Code for Payment" />
+              <ColumnsWrapper $isDark={isDark}>
+                <Column>
+                  <h4>Scan to Pay</h4>
+                  <p>Scan the QR code below to complete your payment.</p>
+                  <QRImage src={scanner} alt="QR Code for Payment" />
+                </Column>
+                <Column>
+                  <h4>NEFT/Bank Transfer</h4>
+                  <p>Use the following details for bank transfer:</p>
+                  <BankDetails>
+                    <p>
+                      <strong>Account Name:</strong> Doon International School
+                    </p>
+                    <p>
+                      <strong>Bank:</strong> ICICI Bank
+                    </p>
+                    <p>
+                      <strong>Branch:</strong> SCO 31, Sector 67, Mohali
+                    </p>
+                    <p>
+                      <strong>Account No:</strong> 366901000718
+                    </p>
+                    <p>
+                      <strong>IFSC Code:</strong> ICIC0003669
+                    </p>
+                  </BankDetails>
+                </Column>
+              </ColumnsWrapper>
             </ModalBody>
           </ModalContent>
         </ModalBackdrop>
@@ -247,7 +273,7 @@ const ModalContent = styled.div`
   padding: 20px;
   border-radius: 10px;
   width: 90%;
-  max-width: 400px;
+  max-width: 600px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   animation: modalEntry 0.5s ease forwards;
 
@@ -265,13 +291,16 @@ const ModalContent = styled.div`
 
 const ModalHeader = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  position: relative;
 
   h3 {
     font-size: 1.5rem;
     font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
   }
 `;
 
@@ -281,20 +310,70 @@ const CloseButton = styled.button`
   font-size: 1.5rem;
   cursor: pointer;
   color: ${({ theme }) => (theme === "dark" ? "#f5f5dc" : "#1a1a1a")};
+  position: absolute;
+  right: 0;
+  top: 0;
 `;
 
 const ModalBody = styled.div`
   text-align: center;
+`;
+
+const ColumnsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+
+  @media (min-width: 640px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 640px) {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      background: ${({ $isDark }) => ($isDark ? "#f5f5dc" : "#1a1a1a")};
+      opacity: 0.3;
+    }
+  }
+`;
+
+const Column = styled.div`
+  flex: 1;
+  text-align: center;
+
+  h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
 
   p {
-    margin-bottom: 20px;
     font-size: 1rem;
+    margin-bottom: 15px;
+  }
+`;
+
+const BankDetails = styled.div`
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.5;
+
+  p {
+    margin: 5px 0;
   }
 `;
 
 const QRImage = styled.img`
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   margin: 0 auto;
   display: block;
   object-fit: contain;
