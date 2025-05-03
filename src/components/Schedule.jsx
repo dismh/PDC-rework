@@ -5,19 +5,20 @@ const Schedule = () => {
   const scheduleItems = [
     {
       title: "Day 1: Opening Ceremony",
-      time: "June 10, 2025 | 9:00 AM - 12:00 PM",
+      time: "August 2, 2025 | 8:45 AM",
     },
     {
       title: "Day 1: Preliminary Rounds",
-      time: "June 10, 2025 | 1:00 PM - 6:00 PM",
+      time: "August 2, 2025 | 9:35 AM",
     },
     {
-      title: "Day 2: Semi Finals",
-      time: "June 11, 2025 | 10:00 AM - 1:00 PM",
+      title: "Day 2: Quarter Finals",
+      time: "August 3, 2025 | 9:00 AM",
     },
+    { title: "Day 2: Semi Finals", time: "August 3, 2025 | 11:15 AM" },
     {
       title: "Day 2: Finals & Closing Ceremony",
-      time: "June 11, 2025 | 3:00 PM - 6:00 PM",
+      time: "August 3, 2025 | 2:00 PM",
     },
   ];
 
@@ -28,7 +29,7 @@ const Schedule = () => {
     >
       <div className="container mx-auto px-6">
         <motion.h2
-          className="text-4xl md:text-6xl font-extrabold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:from-indigo-300 dark:via-purple-300 dark:to-pink-300"
+          className="text-4xl md:text-6xl font-extrabold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:from-indigo-300 dark:via-purple-300 dark:to-pink-300"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -36,6 +37,19 @@ const Schedule = () => {
         >
           Event Schedule
         </motion.h2>
+
+        {/* Emphasized Registration Section */}
+        <motion.div
+          className="max-w-3xl mx-auto mb-12 p-4 rounded-xl bg-gradient-to-r from-indigo-500 to-pink-500 text-white text-center shadow-lg"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: false }}
+        >
+          <p className="text-2xl md:text-3xl font-bold">
+            Registrations open on 5 May
+          </p>
+        </motion.div>
 
         <div className="relative max-w-3xl mx-auto">
           <div className="absolute left-1 md:left-2 top-0 h-full w-1 bg-gradient-to-b from-indigo-500 to-pink-500 rounded-full"></div>

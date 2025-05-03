@@ -43,7 +43,7 @@ function App() {
             <span className="inline-block w-[100px] sm:w-[110px] md:w-[120px] text-center">
               <FlipWords
                 words={["Compete.", "Debate.", "Shine."]}
-                duration={2000}
+                duration={1000}
                 className="text-xl sm:text-3xl md:text-4xl font-semibold gangnam-style"
               />
             </span>
