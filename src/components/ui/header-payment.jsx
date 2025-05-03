@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import img from "../../assets/Logo.png";
-import { Link } from "react-router-dom";
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -51,13 +51,13 @@ const Header = () => {
         <nav className="hidden md:flex items-center space-x-6">
           <ul className="flex space-x-6">
             <li>
-              <Link
-                to="/"
+              <a
+                href="/"
              
                 className="hover:text-blue-300 dark:hover:text-blue-400 font-semibold uppercase"
               >
                 Home
-              </Link>
+              </a>
             </li>
           </ul>
           <button
