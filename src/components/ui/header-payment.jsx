@@ -123,26 +123,12 @@ const Header = () => {
             transition={{ duration: 0.3 }}
           >
             <ul className="flex flex-col space-y-3 text-lg">
-              {["home", "about", "schedule", "register", "contact"].map(
-                (id) => (
-                  <li key={id}>
-                    <a
-                      href={`#${id}`}
-                      onClick={(e) => handleScroll(e, `#${id}`)}
-                      className="block text-white hover:text-blue-300 dark:hover:text-blue-400 capitalize"
-                    >
-                      {id}
-                    </a>
-                  </li>
-                )
-              )}
               <li>
                 <a
-                  href=".pay-btn"
-                  onClick={(e) => handleScroll(e, `.pay-btn`)}
+                  href="/"
                   className="block text-white hover:text-yellow-400 uppercase font-semibold"
                 >
-                  Payment
+                  Home
                 </a>
               </li>
             </ul>
