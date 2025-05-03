@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 const Register = () => {
@@ -12,15 +13,13 @@ const Register = () => {
           spots available!
         </p>
         <div className="flex justify-center">
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScDgCY7yxyKNbAqFTC3axd_g2HmJrMcfAFK8bgW5CFQ2M0ebg/viewform?usp=sharing"
+          <Link
+            to="/register"
             className="inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 via-sky-600 to-blue-700 rounded-full hover:from-blue-700 hover:via-sky-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-[0_0_25px_rgba(56,189,248,0.8)]"
           >
-            Go to Form
+            Go to Registration
             <ArrowRight className="w-5 h-5" />
-          </a>
-
-
+          </Link>
         </div>
       </div>
     </section>

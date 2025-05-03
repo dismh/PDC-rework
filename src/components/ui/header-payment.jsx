@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import img from "../assets/Logo.png";
+import img from "../../assets/Logo.png";
 import { Link } from "react-router-dom";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,24 +50,13 @@ const Header = () => {
 
         <nav className="hidden md:flex items-center space-x-6">
           <ul className="flex space-x-6">
-            {["home", "about", "schedule", "register", "contact"].map((id) => (
-              <li key={id}>
-                <a
-                  href={`#${id}`}
-                  onClick={(e) => handleScroll(e, `#${id}`)}
-                  className="hover:text-blue-300 dark:hover:text-blue-400 capitalize"
-                >
-                  {id}
-                </a>
-              </li>
-            ))}
             <li>
               <Link
-                to="/register"
+                to="/"
              
                 className="hover:text-blue-300 dark:hover:text-blue-400 font-semibold uppercase"
               >
-                Registration
+                Home
               </Link>
             </li>
           </ul>
@@ -148,13 +137,13 @@ const Header = () => {
                 )
               )}
               <li>
-              <Link
-                to="/register"
-             
-                className="hover:text-blue-300 dark:hover:text-blue-400 font-semibold uppercase"
-              >
-                Registration
-              </Link>
+                <a
+                  href=".pay-btn"
+                  onClick={(e) => handleScroll(e, `.pay-btn`)}
+                  className="block text-white hover:text-yellow-400 uppercase font-semibold"
+                >
+                  Payment
+                </a>
               </li>
             </ul>
           </motion.nav>
