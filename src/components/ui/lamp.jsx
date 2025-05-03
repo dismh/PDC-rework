@@ -1,8 +1,30 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { cn } from "../../lib/utils.js";
-
+import { useState } from "react";
+// LampDemo component with hover animations on cards
 export function LampDemo() {
+  // Card hover animation variants
+  const cardVariants = {
+    rest: {
+      scale: 1,
+      y: 0,
+      boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+      transition: {
+        duration: 0.3,
+        ease: "easeOut",
+      },
+    },
+    hover: {
+      scale: 1.05,
+      y: -10,
+      boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1)",
+      transition: {
+        duration: 0.3,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <LampContainer>
       <motion.h1
@@ -24,6 +46,9 @@ export function LampDemo() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8, ease: "easeInOut" }}
+          variants={cardVariants}
+          whileHover="hover"
+          animate="rest"
           className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 w-64 text-center border border-gray-300 dark:border-gray-600"
         >
           <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
@@ -39,6 +64,9 @@ export function LampDemo() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8, ease: "easeInOut" }}
+          variants={cardVariants}
+          whileHover="hover"
+          animate="rest"
           className="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8 w-72 text-center border-4 border-purple-500 dark:border-cyan-500 scale-110"
         >
           <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
@@ -54,6 +82,9 @@ export function LampDemo() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8, ease: "easeInOut" }}
+          variants={cardVariants}
+          whileHover="hover"
+          animate="rest"
           className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 w-64 text-center border border-gray-300 dark:border-gray-600"
         >
           <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
@@ -68,13 +99,11 @@ export function LampDemo() {
   );
 }
 
-export const LampContainer = ({ children, className }) => {
+// LampContainer component
+export const LampContainer = ({ children }) => {
   return (
     <div
-      className={cn(
-        "relative flex min-h-[75vh] flex-col items-center justify-center overflow-hidden bg-white dark:bg-slate-950 w-full rounded-md z-0",
-        className
-      )}
+      className="relative flex min-h-[75vh] flex-col items-center justify-center overflow-hidden bg-white dark:bg-slate-950 w-full rounded-md z-0"
     >
       <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0">
         <motion.div
@@ -121,7 +150,7 @@ export const LampContainer = ({ children, className }) => {
           transition={{
             delay: 0.3,
             duration: 0.8,
-            ease: "easeInOut",
+            usage: "easeInOut",
           }}
           className="absolute inset-auto z-30 h-36 w-64 -translate-y-[6rem] rounded-full bg-purple-400 dark:bg-cyan-400 blur-2xl"
         ></motion.div>
@@ -140,9 +169,8 @@ export const LampContainer = ({ children, className }) => {
         <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-white dark:bg-slate-950"></div>
       </div>
 
-      {/* ✅ RESPONSIVE FIX: Safe translateY by screen size */}
-      <div className="relative z-50 flex flex-col items-center px-5 
-        translate-y-[-2rem] sm:translate-y-[-6rem] md:translate-y-[-10rem]">
+      {/* Responsive translateY */}
+      <div className="relative z-50 flex flex-col items-center px-5 translate-y-[-2rem] sm:translate-y-[-6rem] md:translate-y-[-10rem]">
         {children}
       </div>
     </div>
