@@ -50,7 +50,7 @@ const Header = () => {
 
         <nav className="hidden md:flex items-center space-x-6">
           <ul className="flex space-x-6">
-            {["home", "about", "schedule", "register", "contact"].map((id) => (
+            {["home", "about", "schedule", "contact"].map((id) => (
               <li key={id}>
                 <a
                   href={`#${id}`}
@@ -134,7 +134,7 @@ const Header = () => {
             transition={{ duration: 0.3 }}
           >
             <ul className="flex flex-col space-y-3 text-lg">
-              {["home", "about", "schedule", "register", "contact"].map(
+              {["home", "about", "schedule", "contact"].map(
                 (id) => (
                   <li key={id}>
                     <a

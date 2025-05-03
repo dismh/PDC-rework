@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 import "./index.css"; // or wherever your Tailwind CSS file is
 import { AuroraBackground } from "./components/ui/aurora-background.jsx";
 import { FlipWords } from "./components/ui/flip-words.jsx";
-import { CashPrizeWide } from "./components/CashPrizeWide.jsx";
+import { CashPrizes } from "./components/CashPrizes.jsx";
 import PayButton from "./components/ui/Payment.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import StickyBanner from "./components/StickyBanner.jsx"
@@ -63,7 +63,7 @@ const MainContent = () => (
       <PreparationAndTimings />
       <PoisAndConduct />
       <Schedule />
-      <CashPrizeWide />
+      <CashPrizes />
       <Register />
       <Contact />
       <StickyBanner/>

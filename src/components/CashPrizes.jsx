@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export function CashPrizeWide() {
+export function CashPrizes() {
   // Card animation variants
   const cardVariants = {
     rest: {
@@ -25,8 +25,10 @@ export function CashPrizeWide() {
   };
 
   return (
+    
     <div className="relative min-h-[80vh] flex flex-col items-center justify-center bg-gradient-to-b from-gray-100 to-gray-300 dark:from-slate-900 dark:to-slate-950 overflow-hidden mt-5 mb-5 z-0">
       {/* Futuristic Background Glow */}
+       <section id="prizes">
       <div className="absolute inset-0 z-0">
         <motion.div
           initial={{ opacity: 0.3, scale: 0.8 }}
@@ -122,6 +124,7 @@ export function CashPrizeWide() {
           </motion.div>
         </div>
       </div>
+      </section>
     </div>
   );
 }
