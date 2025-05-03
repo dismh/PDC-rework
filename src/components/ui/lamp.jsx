@@ -13,11 +13,12 @@ export function LampDemo() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="mt-8 bg-gradient-to-br from-gray-900 to-gray-700 dark:from-slate-300 dark:to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+        className="mt-4 sm:mt-6 bg-gradient-to-br from-gray-900 to-gray-700 dark:from-slate-300 dark:to-slate-500 py-2 sm:py-4 bg-clip-text text-center text-3xl sm:text-4xl md:text-7xl font-medium tracking-tight text-transparent"
       >
         Cash Prizes
       </motion.h1>
-      <div className="mt- flex flex-col md:flex-row gap-6 justify-center items-center">
+
+      <div className="mt-10 flex flex-col md:flex-row gap-8 justify-center items-center">
         {/* Runner Up Team Card */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -33,7 +34,7 @@ export function LampDemo() {
           </p>
         </motion.div>
 
-        {/* Winner Team Card (Center with Emphasis) */}
+        {/* Winner Team Card */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -71,7 +72,7 @@ export const LampContainer = ({ children, className }) => {
   return (
     <div
       className={cn(
-        "relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-white dark:bg-slate-950 w-full rounded-md z-0",
+        "relative flex min-h-[75vh] flex-col items-center justify-center overflow-hidden bg-white dark:bg-slate-950 w-full rounded-md z-0",
         className
       )}
     >
@@ -87,11 +88,12 @@ export const LampContainer = ({ children, className }) => {
           style={{
             backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
           }}
-          className="absolute inset-auto right-1/2 h-56 overflow-visible w-[30rem] bg-gradient-conic from-purple-500 via-transparent to-transparent dark:from-cyan-500 dark:via-transparent dark:to-transparent text-black dark:text-white [--conic-position:from_70deg_at_center_top]"
+          className="absolute inset-auto right-1/2 h-56 w-[30rem] bg-gradient-conic from-purple-500 via-transparent to-transparent dark:from-cyan-500 dark:via-transparent dark:to-transparent text-black dark:text-white [--conic-position:from_70deg_at_center_top]"
         >
           <div className="absolute w-[100%] left-0 bg-white dark:bg-slate-950 h-40 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
           <div className="absolute w-40 h-[100%] left-0 bg-white dark:bg-slate-950 bottom-0 z-20 [mask-image:linear-gradient(to_right,white,transparent)]" />
         </motion.div>
+
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" }}
           whileInView={{ opacity: 1, width: "30rem" }}
@@ -108,9 +110,11 @@ export const LampContainer = ({ children, className }) => {
           <div className="absolute w-40 h-[100%] right-0 bg-white dark:bg-slate-950 bottom-0 z-20 [mask-image:linear-gradient(to_left,white,transparent)]" />
           <div className="absolute w-[100%] right-0 bg-white dark:bg-slate-950 h-40 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
         </motion.div>
+
         <div className="absolute top-1/2 h-48 w-full translate-y-12 scale-x-150 bg-white dark:bg-slate-950 blur-2xl"></div>
         <div className="absolute top-1/2 z-50 h-48 w-full bg-transparent opacity-10 backdrop-blur-md"></div>
         <div className="absolute inset-auto z-50 h-36 w-[28rem] -translate-y-1/2 rounded-full bg-purple-700 dark:bg-cyan-500 opacity-50 blur-3xl"></div>
+
         <motion.div
           initial={{ width: "8rem" }}
           whileInView={{ width: "16rem" }}
@@ -121,6 +125,7 @@ export const LampContainer = ({ children, className }) => {
           }}
           className="absolute inset-auto z-30 h-36 w-64 -translate-y-[6rem] rounded-full bg-purple-400 dark:bg-cyan-400 blur-2xl"
         ></motion.div>
+
         <motion.div
           initial={{ width: "15rem" }}
           whileInView={{ width: "30rem" }}
@@ -131,9 +136,13 @@ export const LampContainer = ({ children, className }) => {
           }}
           className="absolute inset-auto z-50 h-0.5 w-[30rem] -translate-y-[7rem] bg-purple-400 dark:bg-cyan-400"
         ></motion.div>
+
         <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-white dark:bg-slate-950"></div>
       </div>
-      <div className="relative z-50 flex -translate-y-80 flex-col items-center px-5">
+
+      {/* ✅ RESPONSIVE FIX: Safe translateY by screen size */}
+      <div className="relative z-50 flex flex-col items-center px-5 
+        translate-y-[-2rem] sm:translate-y-[-6rem] md:translate-y-[-10rem]">
         {children}
       </div>
     </div>
