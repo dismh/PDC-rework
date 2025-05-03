@@ -42,3 +42,21 @@ html.dark {
   color: #fff; /* Text color */
   text-shadow: 0 0 10px rgb(106, 0, 176), 0 0 20px rgb(115, 39, 247), 0 0 30px rgb(64, 0, 129); /* Blue glow */
 }
+@media (max-width: 768px) {
+  .responsive-translate {
+    transform: translateY(-6rem);
+  }
+}
+
+@media (min-width: 769px) {
+  .responsive-translate {
+    transform: translateY(-10rem);
+  }
+}
+
+/* ✅ Special fix for iPhone SE and similar tiny screens */
+@media (max-width: 350px) {
+  .responsive-translate {
+    transform: translateY(-2rem); /* much less negative, so it stays visible */
+  }
+}
