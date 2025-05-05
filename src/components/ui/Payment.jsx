@@ -43,7 +43,7 @@ const Payment = () => {
           viewport={{ once: false }}
           variants={sectionVariants}
         >
-          Registeration
+          Registration
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500"></span>
         </motion.h2>
 
@@ -64,7 +64,7 @@ const Payment = () => {
               <p className="mt-2">
                 Make the payment for your entire team (3 participants) together via NEFT/Bank Transfer or QR code.{" "}
                 <strong className="text-pink-700 dark:text-pink-300">
-                  It is critical to take a screenshot of the payment, as it must be uploaded in the registration form.
+                  It is mandatory to take a screenshot of the payment, as it must be uploaded in the registration form.
                 </strong>
               </p>
               <StyledWrapper className="mt-4">
