@@ -110,7 +110,7 @@ const Payment = () => {
               <p className="mt-2">
                 Complete the{" "}
                 <a
-                  href="https://forms.gle/4E1TWtAaX4aY4V1b9"
+                  href="https://forms.gle/H21B8kx8E7s4ZvKy8"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-pink-700 dark:text-pink-300 hover:underline"
@@ -120,7 +120,7 @@ const Payment = () => {
                 with your team details (one form per team). Upload the payment screenshot here, including the school name.
               </p>
               <a
-                href="https://forms.gle/4E1TWtAaX4aY4V1b9"
+                href="https://forms.gle/H21B8kx8E7s4ZvKy8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 via-sky-600 to-blue-700 rounded-full hover:from-blue-700 hover:via-sky-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-[0_0_25px_rgba(56,189,248,0.8)]"
