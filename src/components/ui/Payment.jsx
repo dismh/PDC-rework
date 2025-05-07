@@ -37,14 +37,14 @@ const Payment = () => {
       <div className="container mx-auto px-6 max-w-3xl mt-5">
         {/* Heading */}
         <motion.h2
-          className="text-4xl md:text-6xl font-extrabold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:from-indigo-300 dark:via-purple-300 dark:to-pink-300 relative"
+          className="text-4xl md:text-6xl font-extrabold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:from-indigo-300 dark:via-purple-300 dark:to-pink-300 relative h-[1.17em]"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false }}
           variants={sectionVariants}
         >
           Registration
-          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500"></span>
+          <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-1/2 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500"></span>
         </motion.h2>
 
         {/* Registration Instructions */}

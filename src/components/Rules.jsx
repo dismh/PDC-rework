@@ -45,7 +45,7 @@ const Rules = () => {
             viewport={{ once: false }}
           >
             Format
-            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500"></span>
+            <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500"></span>
           </motion.h3>
           <p className="text-xl text-gray-700 dark:text-gray-300 leading-loose pl-4">
             Each debating match pits two teams against each other: one to{" "}
@@ -75,7 +75,7 @@ const Rules = () => {
             viewport={{ once: false }}
           >
             Team Composition
-            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500"></span>
+            <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500"></span>
           </motion.h3>
           <div className="flex flex-col md:flex-row gap-8 pl-4">
             {/* Affirmative Team */}
@@ -126,7 +126,7 @@ const Rules = () => {
             viewport={{ once: false }}
           >
             Flow of Debate
-            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500"></span>
+            <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500"></span>
           </motion.h3>
           <p className="text-xl text-gray-700 dark:text-gray-300 leading-loose mb-4 pl-4">
             Debaters speak in the following order:
@@ -195,7 +195,7 @@ const Rules = () => {
             viewport={{ once: false }}
           >
             Motions
-            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500"></span>
+            <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500"></span>
           </motion.h3>
           <p className="text-xl text-gray-700 dark:text-gray-300 leading-loose pl-4">
             Each round features motions tied to a specific, well-known theme, with

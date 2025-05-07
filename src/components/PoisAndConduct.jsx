@@ -71,7 +71,7 @@ const PoisAndConduct = () => {
             variants={sectionVariants}
           >
             Points of Information (POIs)
-            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500"></span>
+            <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500"></span>
           </motion.h3>
 
           <motion.div
@@ -111,7 +111,7 @@ const PoisAndConduct = () => {
             variants={sectionVariants}
           >
             Code of Conduct
-            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500"></span>
+            <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500"></span>
           </motion.h3>
 
           <motion.div

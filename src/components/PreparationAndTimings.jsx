@@ -91,7 +91,7 @@ const PreparationAndTimings = () => {
             viewport={{ once: false }}
           >
             Preparation Protocol
-            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500"></span>
+            <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500"></span>
           </motion.h3>
           <div className="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-6 md:p-8 transition hover:shadow-xl">
             <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -138,7 +138,7 @@ const PreparationAndTimings = () => {
             viewport={{ once: false }}
           >
             Speech Timings & Signals
-            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500"></span>
+            <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500"></span>
           </motion.h3>
           <div className="grid md:grid-cols-2 gap-8">
             {timingSignals.map((section, idx) => (
